@@ -35,10 +35,15 @@ brew_base_packages:
 brew_cask_applications:
   - name: atom
     install_options: "--force"
+  - name: evernote
   - name: firefox
   - name: google-chrome
   - name: google-hangouts
   - name: gpg-suite
   - name: iterm2
   - name: java
+  - name: jetbrains-toolbox
+  - name: keepassx
   - name: slack
+  - name: vagrant
+  - name: virtualbox
