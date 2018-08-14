@@ -73,4 +73,4 @@ cd dev_laptop_macosx
 
 # Run this from the same directory as this README file. 
 fancy_echo "Running ansible playbook ..."
-ansible-playbook main.yml --ask-sudo-pass -vvvv 
+ansible-playbook main.yml -vvvv 

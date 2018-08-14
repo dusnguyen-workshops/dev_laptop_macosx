@@ -38,7 +38,7 @@ brew_cask_applications:
   - name: firefox
   - name: google-chrome
   - name: google-hangouts
-  - name: gpgtools
+  - name: gpg-suite
   - name: iterm2
   - name: java
   - name: slack
