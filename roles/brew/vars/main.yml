@@ -29,7 +29,9 @@ brew_base_packages:
   - name: libpng
   - name: libxml2
   - name: libyaml
+  - name: node
   - name: terraform
+  - name: terragrunt
   - name: vault
   - name: yarn
 brew_cask_applications:
