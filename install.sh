@@ -73,4 +73,7 @@ cd dev_laptop_macosx
 
 # Run this from the same directory as this README file. 
 fancy_echo "Running ansible playbook ..."
-ansible-playbook main.yml -vvvv 
+ansible-playbook main.yml -i hosts --ask-become-pass -vvvv
+
+fancy_echo "Cleaning up developers laptop repo dir ..."
+cd ../; rm -rf dev_laptop_macosx
