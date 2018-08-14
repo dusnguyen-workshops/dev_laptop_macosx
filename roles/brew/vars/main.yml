@@ -1,0 +1,44 @@
+---
+
+brew_install_cmd: "ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\""
+brew_bin: "/usr/local/bin/brew"
+brew_cask_bin: "/usr/local/bin/brew-cask"
+brew_base_packages:
+  - name: autoconf
+  - name: automake
+  - name: bash
+  - name: bash-completion
+  - name: certbot
+  - name: curl
+  - name: git
+    install_options: "with-gettext,with-pcre,with-persistent-https,with-blk-sha1"
+  - name: git-extras
+  - name: git-lfs
+  - name: git-secrets
+  - name: goenv
+  - name: gnu-sed
+  - name: gnu-tar
+  - name: graphviz
+  - name: heroku-toolbelt
+  - name: jq
+  - name: libevent
+  - name: libffi
+  - name: libidn
+  - name: libmemcached
+  - name: libmpc
+  - name: libpng
+  - name: libxml2
+  - name: libyaml
+  - name: terraform
+  - name: vault
+  - name: yarn
+brew_cask_applications:
+  - name: atom
+    install_options: "--force"
+  - name: firefox
+  - name: google-chrome
+  - name: google-hangouts
+  - name: gpgtools
+  - name: iterm2
+  - name: java
+  - name: slack
