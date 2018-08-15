@@ -6,6 +6,7 @@ brew_cask_bin: "/usr/local/bin/brew-cask"
 brew_base_packages:
   - name: autoconf
   - name: automake
+  - name: awscli
   - name: bash
   - name: bash-completion
   - name: certbot
