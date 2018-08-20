@@ -48,3 +48,14 @@
     - brew
     - brew-cask
     - cleanup
+
+- name: Check is pinentry-mac installed
+  shell: command -v pinentry-mac  >/dev/null 2>&1
+  register: pinentry_mac_exist
+  ignore_errors: yes
+
+- name: Copy pinentry-mac conf
+  command: 'echo "pinentry-program /usr/local/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf'
+  when: pinentry_mac_exist.rc == 0
+  tags:
+    - pinentry-mac-conf-copy
