@@ -4,4 +4,7 @@ Personal OS X setup provisioned through Ansible
 
 ## Installation
 
-Simply cloning this repository and running the install.sh script.
+Simply run the following command:
+```
+curl -L https://raw.githubusercontent.com/dusnguyen-ansible/dev_laptop_macosx/master/install.sh | bash
+```
