@@ -12,15 +12,14 @@ brew_base_packages:
   - name: certbot
   - name: curl
   - name: git
-    install_options: "with-gettext,with-pcre,with-persistent-https,with-blk-sha1"
   - name: git-extras
   - name: git-lfs
   - name: git-secrets
   - name: goenv
   - name: gnu-sed
   - name: gnu-tar
+  - name: gpg
   - name: graphviz
-  - name: heroku-toolbelt
   - name: jq
   - name: libevent
   - name: libffi
@@ -30,24 +29,23 @@ brew_base_packages:
   - name: libpng
   - name: libxml2
   - name: libyaml
+  - name: lsd
   - name: node
   - name: pinentry-mac
-  - name: terraform
-  - name: terragrunt
+  - name: "terraform"
+    path: "/usr/local/bin/"
+  - name: "terragrunt"
   - name: vault
   - name: yarn
 brew_cask_applications:
-  - name: atom
-    install_options: "--force"
   - name: evernote
   - name: firefox
-  - name: google-chrome
-  - name: google-hangouts
+  - name: "google-chrome"
   - name: gpg-suite
   - name: iterm2
-  - name: java
-  - name: jetbrains-toolbox
   - name: keepassx
   - name: slack
   - name: vagrant
-  - name: virtualbox
+  - name: "visual-studio-code"
+    install_options: "--force"
+  - name: whatsapp
