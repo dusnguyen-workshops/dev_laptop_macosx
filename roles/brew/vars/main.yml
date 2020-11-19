@@ -11,6 +11,7 @@ brew_base_packages:
   - name: bash-completion
   - name: certbot
   - name: curl
+  - name: fzf
   - name: git
   - name: git-extras
   - name: git-lfs

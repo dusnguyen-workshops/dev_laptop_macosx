@@ -5,8 +5,8 @@
 #  1. Installs:
 #    - xcode
 #    - homebrew
-#    - ansible (via brew) 
-#    - a few ansible galaxy playbooks (zsh, homebrew, cask etc)  
+#    - ansible (via brew)
+#    - a few ansible galaxy playbooks (zsh, homebrew, cask etc) 
 #  2. Kicks off the ansible playbook:
 #    - main.yml
 #
@@ -33,7 +33,7 @@ set -e
 # Ensure Apple's command line tools are installed
 if ! command -v cc >/dev/null; then
   fancy_echo "Installing xcode ..."
-  xcode-select --install 
+  xcode-select --install
 else
   fancy_echo "Xcode already installed. Skipping."
 fi
@@ -48,7 +48,7 @@ fi
 # [Install Ansible](http://docs.ansible.com/intro_installation.html).
 if ! command -v ansible >/dev/null; then
   fancy_echo "Installing Ansible ..."
-  brew install ansible 
+  brew install ansible
 else
   fancy_echo "Ansible already installed. Skipping."
 fi
@@ -66,12 +66,12 @@ if [ -d "./dev_laptop_macosx" ]; then
   rm -rf ./dev_laptop_macosx/
 fi
 fancy_echo "Cloning developers laptop repo ..."
-git clone https://github.com/dusnguyen-ansible/dev_laptop_macosx.git 
+git clone https://github.com/dusnguyen-ansible/dev_laptop_macosx.git
 
 fancy_echo "Changing to developers laptop repo dir ..."
 cd dev_laptop_macosx
 
-# Run this from the same directory as this README file. 
+# Run this from the same directory as this README file.
 fancy_echo "Running ansible playbook ..."
 ansible-playbook main.yml -i hosts --ask-become-pass -vvvv
 
