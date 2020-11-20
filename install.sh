@@ -45,6 +45,9 @@ else
   fancy_echo "Homebrew already installed. Skipping."
 fi
 
+fancy_echo "Fixing Homebrew permission"
+sudo chown -R $(whoami) /usr/local/var/homebrew
+
 # [Install Ansible](http://docs.ansible.com/intro_installation.html).
 if ! command -v ansible >/dev/null; then
   fancy_echo "Installing Ansible ..."
@@ -61,12 +64,8 @@ else
 fi
 
 # Clone the repository to your local drive.
-if [ -d "~/dev_laptop_macosx" ]; then
-  fancy_echo "Developers Laptop repo dir exists. Removing ..."
-  rm -rf ~/dev_laptop_macosx/
-fi
-
 fancy_echo "Cloning developers laptop repo ..."
+rm -rf ~/dev_laptop_macosx/
 git clone https://github.com/dusnguyen-ansible/dev_laptop_macosx.git ~/dev_laptop_macosx
 
 fancy_echo "Changing to developers laptop repo dir ..."
