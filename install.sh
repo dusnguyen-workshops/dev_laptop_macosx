@@ -61,19 +61,20 @@ else
 fi
 
 # Clone the repository to your local drive.
-if [ -d "./dev_laptop_macosx" ]; then
+if [ -d "~/dev_laptop_macosx" ]; then
   fancy_echo "Developers Laptop repo dir exists. Removing ..."
-  rm -rf ./dev_laptop_macosx/
+  rm -rf ~/dev_laptop_macosx/
 fi
+
 fancy_echo "Cloning developers laptop repo ..."
-git clone https://github.com/dusnguyen-ansible/dev_laptop_macosx.git
+git clone https://github.com/dusnguyen-ansible/dev_laptop_macosx.git ~/dev_laptop_macosx
 
 fancy_echo "Changing to developers laptop repo dir ..."
-cd dev_laptop_macosx
+cd ~/dev_laptop_macosx
 
 # Run this from the same directory as this README file.
 fancy_echo "Running ansible playbook ..."
 ansible-playbook main.yml -i hosts --ask-become-pass -vvvv
 
 fancy_echo "Cleaning up developers laptop repo dir ..."
-cd ../; rm -rf dev_laptop_macosx
+rm -rf ~/dev_laptop_macosx
