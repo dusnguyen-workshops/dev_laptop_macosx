@@ -6,7 +6,7 @@
 #    - xcode
 #    - homebrew
 #    - ansible (via brew)
-#    - a few ansible galaxy playbooks (zsh, homebrew, cask etc) 
+#    - a few ansible galaxy playbooks (zsh, homebrew, cask etc)
 #  2. Kicks off the ansible playbook:
 #    - main.yml
 #
@@ -77,3 +77,7 @@ ansible-playbook main.yml -i hosts --ask-become-pass -vvvv
 
 fancy_echo "Cleaning up developers laptop repo dir ..."
 rm -rf ~/dev_laptop_macosx
+
+#fancy_echo "Installing Nerd Fonts ..."
+#git clone https://github.com/ryanoasis/nerd-fonts.git ~/nerd-fonts
+#cd ~/nerd-fonts; bash install.sh
